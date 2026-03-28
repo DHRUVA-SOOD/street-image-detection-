@@ -19,9 +19,9 @@ st.title("🚗 Multimodal Object Detection (RGB + Thermal + LiDAR)")
 
 @st.cache_resource
 def load_models():
-    rgb_model = YOLO(r"C:\Users\Daruv\OneDrive\Desktop\fusion\rgb_final.pt")
-    thermal_model = YOLO(r"C:\Users\Daruv\OneDrive\Desktop\fusion\thermal_final.pt")
-    lidar_model = YOLO(r"C:\Users\Daruv\OneDrive\Desktop\fusion\lidar_final.pt")
+    rgb_model = YOLO("https://huggingface.co/Daruvah/rgb_pt/resolve/main/rgb_final.pt")
+    thermal_model = YOLO("https://huggingface.co/Daruvah/thermal_pt/resolve/main/thermal_final.pt")
+    lidar_model = YOLO("https://huggingface.co/Daruvah/lidar_pt/resolve/main/lidar_final.pt")
     return rgb_model, thermal_model, lidar_model
 
 rgb_model, thermal_model, lidar_model = load_models()
